@@ -66,7 +66,9 @@ main div.main-container {
   position: relative;
 }
 
-main div.grid-container {
+main div.grid-container-easy,
+div.grid-container-medium,
+div.grid-container-hard {
   width: 60vh;
   height: 60vh;
   border: 1px solid black;
@@ -79,8 +81,6 @@ main div.grid-container {
 }
 
 div.square {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 1px solid black;
   display: flex;
   justify-content: center;
@@ -88,6 +88,21 @@ div.square {
   font-size: 1.5em;
 }
 
+/* square dimensions */
+.easy {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
+.medium {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+.hard {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+}
 /* footer */
 footer {
   height: 5vh;
