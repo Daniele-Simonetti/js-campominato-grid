@@ -4,12 +4,12 @@
 // con difficoltà 3 => tra 1 e 49
 
 
-// creo una giriglia
+// creo la griglia del livello easy 10x10
 const row = 10;
 const col = 10;
 const numberSquare = row * col;
-const maxNumber = numberSquare;
-const minNumber = 1;
+
+
 // seleziono il mio container per creargli all'interno dei div
 document.getElementById('gridConatiner');
 
@@ -18,7 +18,7 @@ for (let i = 0; i < numberSquare; i++) {
   const square = document.createElement('div');
   square.classList.add('square', 'easy');
   console.log(square);
-  square.append(numberEasy);
+  
   gridContainer.append(square);
   
 }
