@@ -79,7 +79,11 @@ main div.grid-container {
 }
 
 div.square {
-  width: 10%;
-  height: 10%;
+  width: calc(100% / 10);
+  height: calc(100% / 10);
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
 }
