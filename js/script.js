@@ -10,11 +10,15 @@ const playBtn = document.getElementById('play');
 // creo l'evento al click
 playBtn.addEventListener ('click', function () 
 {
+  // quando clicco pulisce tutto l'html per evitare di stampare a all'infinito
+  const container = document.getElementById('gridContainer');
+  container.innerHTML = '';
   // ccontrollo il valore scelto dall'utente
   const difficult = document.getElementById('difficulty').value;
   console.log(difficult);
-  let hidden = document.querySelector('.hidden')
-
+  
+  // questa variabile mi serve per nascondere il grid
+  let hidden = document.querySelector('.hidden');
   
   // creo le condizioni
   if (difficult == 'easy') {
@@ -26,8 +30,7 @@ playBtn.addEventListener ('click', function ()
     // seleziono il mio container per creargli all'interno dei div
     document.getElementById('gridConatiner');
 
-    
-    
+    hidden.classList.add('active');
     // creo un ciclo for per creare tanti div con all'interno dei numeri
     for (let i = 1; i <= numberSquareEasy; i++) {
       const square = document.createElement('div');
@@ -41,7 +44,7 @@ playBtn.addEventListener ('click', function ()
     const rowMedium = 9;
     const colMedium = 9;
     const numberSquareMedium = rowMedium * colMedium;
-    
+    hidden.classList.add('active');
     for (let i = 1; i <= numberSquareMedium; i++) {
       const square = document.createElement('div');
       square.classList.add('square', 'medium');
@@ -54,7 +57,7 @@ playBtn.addEventListener ('click', function ()
     const rowHard = 7;
     const colHard = 7;
     const numberSquareHard = rowHard * colHard;
-    
+    hidden.classList.add('active');
     for (let i = 1; i <= numberSquareHard; i++) {
       const square = document.createElement('div');
       square.classList.add('square', 'hard');
@@ -64,7 +67,6 @@ playBtn.addEventListener ('click', function ()
     }
   }
 })
-
 
 
 

@@ -111,6 +111,10 @@ div.square {
   width: calc(100% / 7);
   height: calc(100% / 7);
 }
+
+.blue {
+  background-color: cornflowerblue;
+}
 /* footer */
 footer {
   height: 5vh;
