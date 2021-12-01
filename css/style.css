@@ -90,6 +90,13 @@ div.square {
 }
 
 /* square dimensions */
+.hidden {
+  display: none;
+}
+.hidden.active {
+  display: block;
+}
+
 .easy {
   width: calc(100% / 10);
   height: calc(100% / 10);

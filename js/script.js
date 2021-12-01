@@ -12,9 +12,12 @@ playBtn.addEventListener ('click', function ()
 {
   // ccontrollo il valore scelto dall'utente
   const difficult = document.getElementById('difficulty').value;
+  console.log(difficult);
+  let hidden = document.querySelector('.hidden')
+
   
   // creo le condizioni
-  if (difficult == 'Easy') {
+  if (difficult == 'easy') {
     // creo la griglia del livello easy 10x10
     const rowEasy = 10;
     const colEasy = 10;
@@ -22,6 +25,8 @@ playBtn.addEventListener ('click', function ()
     
     // seleziono il mio container per creargli all'interno dei div
     document.getElementById('gridConatiner');
+
+    
     
     // creo un ciclo for per creare tanti div con all'interno dei numeri
     for (let i = 1; i <= numberSquareEasy; i++) {
@@ -31,33 +36,35 @@ playBtn.addEventListener ('click', function ()
       square.innerHTML = i;
       gridContainer.append(square);
     }
+  } else if (difficult == 'medium') {
+    // creo la griglia del livello medium 9x9
+    const rowMedium = 9;
+    const colMedium = 9;
+    const numberSquareMedium = rowMedium * colMedium;
+    
+    for (let i = 1; i <= numberSquareMedium; i++) {
+      const square = document.createElement('div');
+      square.classList.add('square', 'medium');
+      console.log(square);
+      square.innerHTML = i;
+      gridContainer.append(square);
+    }
+  }  else if (difficult == 'hard') {
+    // creo la griglia del livello hard 7x7
+    const rowHard = 7;
+    const colHard = 7;
+    const numberSquareHard = rowHard * colHard;
+    
+    for (let i = 1; i <= numberSquareHard; i++) {
+      const square = document.createElement('div');
+      square.classList.add('square', 'hard');
+      console.log(square);
+      square.innerHTML = i;
+      gridContainer.append(square);
+    }
   }
 })
 
 
 
-// creo la griglia del livello medium 9x9
-// const rowMedium = 9;
-// const colMedium = 9;
-// const numberSquareMedium = rowMedium * colMedium;
 
-// for (let i = 1; i <= numberSquareMedium; i++) {
-//   const square = document.createElement('div');
-//   square.classList.add('square', 'medium');
-//   console.log(square);
-//   square.innerHTML = i;
-//   gridContainer.append(square);
-// }
-
-// creo la griglia del livello hard 7x7
-// const rowHard = 7;
-// const colHard = 7;
-// const numberSquareHard = rowHard * colHard;
-
-// for (let i = 1; i <= numberSquareHard; i++) {
-//   const square = document.createElement('div');
-//   square.classList.add('square', 'hard');
-//   console.log(square);
-//   square.innerHTML = i;
-//   gridContainer.append(square);
-// }
