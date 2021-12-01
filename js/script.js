@@ -38,6 +38,13 @@ playBtn.addEventListener ('click', function ()
       console.log(square);
       square.innerHTML = i;
       gridContainer.append(square);
+
+      // se clicco sullo squaree questto cambia colore
+
+      square.addEventListener('click', function () {
+        const element = this;
+        element.classList.add('blue')
+      });
     }
   } else if (difficult == 'medium') {
     // creo la griglia del livello medium 9x9
@@ -51,6 +58,13 @@ playBtn.addEventListener ('click', function ()
       console.log(square);
       square.innerHTML = i;
       gridContainer.append(square);
+
+      // se clicco sullo squaree questto cambia colore
+
+      square.addEventListener('click', function () {
+        const element = this;
+        element.classList.add('blue')
+      });
     }
   }  else if (difficult == 'hard') {
     // creo la griglia del livello hard 7x7
@@ -64,6 +78,12 @@ playBtn.addEventListener ('click', function ()
       console.log(square);
       square.innerHTML = i;
       gridContainer.append(square);
+
+      // se clicco sullo squaree questto cambia colore
+      square.addEventListener('click', function () {
+        const element = this;
+        element.classList.add('blue')
+      });
     }
   }
 })
