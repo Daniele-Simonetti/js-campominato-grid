@@ -3,7 +3,10 @@
 // con difficoltà 2 => tra 1 e 81
 // con difficoltà 3 => tra 1 e 49
 
-
+// FUNZIONE
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
 // prendo il bottone per avviare lo script
 const playBtn = document.getElementById('play');
 
@@ -16,6 +19,15 @@ playBtn.addEventListener ('click', function ()
   // ccontrollo il valore scelto dall'utente
   const difficult = document.getElementById('difficulty').value;
   console.log(difficult);
+
+  let array = [];
+  for(let x = 1; x <= 4; x++){
+    let num = getRndInteger(1, 100);
+    //metterli in un array
+    array.push(num);
+  }
+  //stamparli
+  console.log('Numeri Bomba', array);
   
   // questa variabile mi serve per nascondere il grid
   let hidden = document.querySelector('.hidden');
@@ -29,21 +41,20 @@ playBtn.addEventListener ('click', function ()
     
     // seleziono il mio container per creargli all'interno dei div
     document.getElementById('gridConatiner');
-
+    
     hidden.classList.add('active');
     // creo un ciclo for per creare tanti div con all'interno dei numeri
     for (let i = 1; i <= numberSquareEasy; i++) {
       const square = document.createElement('div');
       square.classList.add('square', 'easy');
-      console.log(square);
+      // console.log(square);
       square.innerHTML = i;
       gridContainer.append(square);
 
-      // se clicco sullo squaree questto cambia colore
-
+      // se clicco sullo square questo cambia colore
       square.addEventListener('click', function () {
         const element = this;
-        element.classList.add('blue')
+        element.classList.add('blue');
       });
     }
   } else if (difficult == 'medium') {
@@ -55,15 +66,14 @@ playBtn.addEventListener ('click', function ()
     for (let i = 1; i <= numberSquareMedium; i++) {
       const square = document.createElement('div');
       square.classList.add('square', 'medium');
-      console.log(square);
+      // console.log(square);
       square.innerHTML = i;
       gridContainer.append(square);
 
-      // se clicco sullo squaree questto cambia colore
-
+      // se clicco sullo square questo cambia colore
       square.addEventListener('click', function () {
         const element = this;
-        element.classList.add('blue')
+        element.classList.add('blue');
       });
     }
   }  else if (difficult == 'hard') {
@@ -75,14 +85,15 @@ playBtn.addEventListener ('click', function ()
     for (let i = 1; i <= numberSquareHard; i++) {
       const square = document.createElement('div');
       square.classList.add('square', 'hard');
-      console.log(square);
+      // console.log(square);
       square.innerHTML = i;
       gridContainer.append(square);
 
-      // se clicco sullo squaree questto cambia colore
+      // se clicco sullo square questo cambia colore
       square.addEventListener('click', function () {
         const element = this;
-        element.classList.add('blue')
+        element.classList.add('blue');
+        console.log(element.classList);
       });
     }
   }
