@@ -115,6 +115,10 @@ div.square {
 .blue {
   background-color: blue;
 }
+
+.violet {
+  background-color: violet;
+}
 /* footer */
 footer {
   height: 5vh;

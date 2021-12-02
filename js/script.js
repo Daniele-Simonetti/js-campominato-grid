@@ -3,10 +3,6 @@
 // con difficoltà 2 => tra 1 e 81
 // con difficoltà 3 => tra 1 e 49
 
-// FUNZIONE
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
 // prendo il bottone per avviare lo script
 const playBtn = document.getElementById('play');
 
@@ -19,15 +15,6 @@ playBtn.addEventListener ('click', function ()
   // ccontrollo il valore scelto dall'utente
   const difficult = document.getElementById('difficulty').value;
   console.log(difficult);
-
-  let array = [];
-  for(let x = 1; x <= 4; x++){
-    let num = getRndInteger(1, 100);
-    //metterli in un array
-    array.push(num);
-  }
-  //stamparli
-  console.log('Numeri Bomba', array);
   
   // questa variabile mi serve per nascondere il grid
   let hidden = document.querySelector('.hidden');
